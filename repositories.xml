@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<repositories version="1.0">
+  <repo priority="50" quality="experimental" status="unofficial">
+    <name>tommie</name>
+    <description>Additional ebuilds for tommie</description>
+    <homepage>https://github.com/tommie/portage-overlay</homepage>
+    <owner>
+      <email>tommie+po@gannert.se</email>
+    </owner>
+    <source type="git">https://github.com/tommie/portage-overlay.git</source>
+  </repo>
+</repositories>
