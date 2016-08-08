@@ -18,4 +18,9 @@ IUSE=""
 #RESTRICT="strip"
 
 DEPEND="dev-python/setuptools"
-RDEPEND=""
+RDEPEND="<dev-python/bottle-0.13
+         <dev-python/click-6.0
+         <dev-python/lockfile-0.13
+         <dev-python/requests-3.0.0
+         dev-python/colorama
+         <dev-python/pyserial-4"
