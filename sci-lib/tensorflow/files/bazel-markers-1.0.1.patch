@@ -1,0 +1,352 @@
+--- bazel-base/external/@boringssl.marker
++++ bazel-base/external/@boringssl.marker
+@@ -0,0 +1 @@
++7d266d9ab00a175bc9034a1b3a089ce2
+--- bazel-base/external/@com_googlesource_code_re2.marker
++++ bazel-base/external/@com_googlesource_code_re2.marker
+@@ -0,0 +1 @@
++48017ae8d407107d7ddc8428339b3dd0
+--- bazel-base/external/@curl.marker
++++ bazel-base/external/@curl.marker
+@@ -0,0 +1 @@
++b64c6e59bb01704d9a24b29326008c6f
+--- bazel-base/external/@d3.marker
++++ bazel-base/external/@d3.marker
+@@ -0,0 +1 @@
++70dbf88bda851a37413d8d121ff5ad1c
+--- bazel-base/external/@dagre.marker
++++ bazel-base/external/@dagre.marker
+@@ -0,0 +1 @@
++fdff83baafa00341c417e339500a1138
+--- bazel-base/external/@eigen_archive.marker
++++ bazel-base/external/@eigen_archive.marker
+@@ -0,0 +1 @@
++e2a3a3f9fc1ced4b0f98db3e9817ee12
+--- bazel-base/external/@es6_promise.marker
++++ bazel-base/external/@es6_promise.marker
+@@ -0,0 +1 @@
++3cf02294d9e33f54478979d54541f462
+--- bazel-base/external/@farmhash_archive.marker
++++ bazel-base/external/@farmhash_archive.marker
+@@ -0,0 +1 @@
++e340ec57fe88e7b8dc978e1abfd5aba6
+--- bazel-base/external/@font_roboto.marker
++++ bazel-base/external/@font_roboto.marker
+@@ -0,0 +1 @@
++375659bf4e593c37963e6665fb206e6d
+--- bazel-base/external/@gemmlowp.marker
++++ bazel-base/external/@gemmlowp.marker
+@@ -0,0 +1 @@
++684d13928b6a2e6c933df20629157902
+--- bazel-base/external/@gif_archive.marker
++++ bazel-base/external/@gif_archive.marker
+@@ -0,0 +1 @@
++c5f2f6fed85a3609b23768656f5a400c
+--- bazel-base/external/@graphlib.marker
++++ bazel-base/external/@graphlib.marker
+@@ -0,0 +1 @@
++7ff601c03d3fdf0286473d63ad68c763
+--- bazel-base/external/@grpc.marker
++++ bazel-base/external/@grpc.marker
+@@ -0,0 +1 @@
++cb91febafe5efb0c58bf80077fa37ee4
+--- bazel-base/external/@highwayhash.marker
++++ bazel-base/external/@highwayhash.marker
+@@ -0,0 +1 @@
++85a5026a524f89d29a471fe85531fea9
+--- bazel-base/external/@iron_a11y_announcer.marker
++++ bazel-base/external/@iron_a11y_announcer.marker
+@@ -0,0 +1 @@
++29b999f7332022948dcc856a2cce288f
+--- bazel-base/external/@iron_a11y_keys_behavior.marker
++++ bazel-base/external/@iron_a11y_keys_behavior.marker
+@@ -0,0 +1 @@
++9e013aa3aa2fbec25e8e97d72ef80c47
+--- bazel-base/external/@iron_ajax.marker
++++ bazel-base/external/@iron_ajax.marker
+@@ -0,0 +1 @@
++0e9a109eb5c961b406a73833afca0aa4
+--- bazel-base/external/@iron_autogrow_textarea.marker
++++ bazel-base/external/@iron_autogrow_textarea.marker
+@@ -0,0 +1 @@
++fd9a5d116f1714ce0a1795f909a5bacc
+--- bazel-base/external/@iron_behaviors.marker
++++ bazel-base/external/@iron_behaviors.marker
+@@ -0,0 +1 @@
++71bb05ee439d177cb54eab053b01a315
+--- bazel-base/external/@iron_checked_element_behavior.marker
++++ bazel-base/external/@iron_checked_element_behavior.marker
+@@ -0,0 +1 @@
++64d8840548ebd568c773b4bec675d9ce
+--- bazel-base/external/@iron_collapse.marker
++++ bazel-base/external/@iron_collapse.marker
+@@ -0,0 +1 @@
++932cbde0c3c5c5485531e3b8a2188d79
+--- bazel-base/external/@iron_dropdown.marker
++++ bazel-base/external/@iron_dropdown.marker
+@@ -0,0 +1 @@
++9faad520a00b50790c84c8cd2c0a2538
+--- bazel-base/external/@iron_fit_behavior.marker
++++ bazel-base/external/@iron_fit_behavior.marker
+@@ -0,0 +1 @@
++d1a1782a8a567e26cdc7cc92fca28621
+--- bazel-base/external/@iron_flex_layout.marker
++++ bazel-base/external/@iron_flex_layout.marker
+@@ -0,0 +1 @@
++713e50660276c8497d93a761f10842c7
+--- bazel-base/external/@iron_form_element_behavior.marker
++++ bazel-base/external/@iron_form_element_behavior.marker
+@@ -0,0 +1 @@
++d7768fce2c1e2f96464331e29283f4e1
+--- bazel-base/external/@iron_icon.marker
++++ bazel-base/external/@iron_icon.marker
+@@ -0,0 +1 @@
++1a79690627743078987648454fe14ee7
+--- bazel-base/external/@iron_icons.marker
++++ bazel-base/external/@iron_icons.marker
+@@ -0,0 +1 @@
++69091f1bbc1e00d90ce458692db10c31
+--- bazel-base/external/@iron_iconset_svg.marker
++++ bazel-base/external/@iron_iconset_svg.marker
+@@ -0,0 +1 @@
++5457ef383fa59097eec2248e546ad051
+--- bazel-base/external/@iron_input.marker
++++ bazel-base/external/@iron_input.marker
+@@ -0,0 +1 @@
++ae982845e5cb994ec2c150bc8f6eecc1
+--- bazel-base/external/@iron_list.marker
++++ bazel-base/external/@iron_list.marker
+@@ -0,0 +1 @@
++8c152f0c27314df730cb6dd5a5ecead8
+--- bazel-base/external/@iron_menu_behavior.marker
++++ bazel-base/external/@iron_menu_behavior.marker
+@@ -0,0 +1 @@
++395350d1f2276ac302f67944e2c900fd
+--- bazel-base/external/@iron_meta.marker
++++ bazel-base/external/@iron_meta.marker
+@@ -0,0 +1 @@
++21ea03750a9fd4dd8502e1e1a287b8f6
+--- bazel-base/external/@iron_overlay_behavior.marker
++++ bazel-base/external/@iron_overlay_behavior.marker
+@@ -0,0 +1 @@
++82e2dcd96f3fb346df0da9ae607964fc
+--- bazel-base/external/@iron_range_behavior.marker
++++ bazel-base/external/@iron_range_behavior.marker
+@@ -0,0 +1 @@
++c2e06777824140fab75dd223732390e3
+--- bazel-base/external/@iron_resizable_behavior.marker
++++ bazel-base/external/@iron_resizable_behavior.marker
+@@ -0,0 +1 @@
++fcb10ef86c26ce14a124ad3d37023c14
+--- bazel-base/external/@iron_scroll_target_behavior.marker
++++ bazel-base/external/@iron_scroll_target_behavior.marker
+@@ -0,0 +1 @@
++3ac28b11e0b9f861e0082f3b547833fd
+--- bazel-base/external/@iron_selector.marker
++++ bazel-base/external/@iron_selector.marker
+@@ -0,0 +1 @@
++31b5c1c3770afe663a63b7212e978df7
+--- bazel-base/external/@iron_validatable_behavior.marker
++++ bazel-base/external/@iron_validatable_behavior.marker
+@@ -0,0 +1 @@
++ec9d9e9b3185e5fae296c9ee0cf9a402
+--- bazel-base/external/@jemalloc.marker
++++ bazel-base/external/@jemalloc.marker
+@@ -0,0 +1 @@
++eada9aa3a78f98abf8fb211ac8a98f3a
+--- bazel-base/external/@jpeg.marker
++++ bazel-base/external/@jpeg.marker
+@@ -0,0 +1 @@
++2752da87c8220716020e4aa87850b0f6
+--- bazel-base/external/@libxsmm_archive.marker
++++ bazel-base/external/@libxsmm_archive.marker
+@@ -0,0 +1 @@
++1e1e3718b0e0243d812e6066ed295e60
+--- bazel-base/external/@lodash.marker
++++ bazel-base/external/@lodash.marker
+@@ -0,0 +1 @@
++d7c505fe300a2b6d72b3b73f3c155d60
+--- bazel-base/external/@nanopb_git.marker
++++ bazel-base/external/@nanopb_git.marker
+@@ -0,0 +1 @@
++b3b9b2a9a88732072604e2cba0a70246
+--- bazel-base/external/@nasm.marker
++++ bazel-base/external/@nasm.marker
+@@ -0,0 +1 @@
++ac27d9a5c97b8926a81ecfff87d8edee
+--- bazel-base/external/@nccl_archive.marker
++++ bazel-base/external/@nccl_archive.marker
+@@ -0,0 +1 @@
++ad6d0d3fb02fd1fe7c26f85b0412f68a
+--- bazel-base/external/@neon_animation.marker
++++ bazel-base/external/@neon_animation.marker
+@@ -0,0 +1 @@
++ff5f708459757a16aad2b24ad29f7106
+--- bazel-base/external/@numericjs_numeric_min_js.marker
++++ bazel-base/external/@numericjs_numeric_min_js.marker
+@@ -0,0 +1 @@
++5cf93f13ed89e955ce7e85f5386d2b07
+--- bazel-base/external/@paper_behaviors.marker
++++ bazel-base/external/@paper_behaviors.marker
+@@ -0,0 +1 @@
++7bd11518524e48c97bd8a616500edb43
+--- bazel-base/external/@paper_button.marker
++++ bazel-base/external/@paper_button.marker
+@@ -0,0 +1 @@
++90cfac6b8d5572af8c5521dcc49c06fa
+--- bazel-base/external/@paper_checkbox.marker
++++ bazel-base/external/@paper_checkbox.marker
+@@ -0,0 +1 @@
++dae5afe788fffce9ab925b7944a5c250
+--- bazel-base/external/@paper_dialog.marker
++++ bazel-base/external/@paper_dialog.marker
+@@ -0,0 +1 @@
++cda72a8d7faf6a9c1ce1da3cff90fbed
+--- bazel-base/external/@paper_dialog_behavior.marker
++++ bazel-base/external/@paper_dialog_behavior.marker
+@@ -0,0 +1 @@
++93b8a41584156b167fb70f638939cd9c
+--- bazel-base/external/@paper_dialog_scrollable.marker
++++ bazel-base/external/@paper_dialog_scrollable.marker
+@@ -0,0 +1 @@
++1dc527651e83d2d8545901fd9968fec1
+--- bazel-base/external/@paper_dropdown_menu.marker
++++ bazel-base/external/@paper_dropdown_menu.marker
+@@ -0,0 +1 @@
++5d8fc6f22dd502b6c3984b468dba6fce
+--- bazel-base/external/@paper_header_panel.marker
++++ bazel-base/external/@paper_header_panel.marker
+@@ -0,0 +1 @@
++e74def6fddbec636879d064dd42265e3
+--- bazel-base/external/@paper_icon_button.marker
++++ bazel-base/external/@paper_icon_button.marker
+@@ -0,0 +1 @@
++dd0edfc7a7a247cb4208a6a56d8469e2
+--- bazel-base/external/@paper_input.marker
++++ bazel-base/external/@paper_input.marker
+@@ -0,0 +1 @@
++e58694d64c9a3b79f84514f7baa45036
+--- bazel-base/external/@paper_item.marker
++++ bazel-base/external/@paper_item.marker
+@@ -0,0 +1 @@
++0f9d4008938e8fddfa466ba6338ccd72
+--- bazel-base/external/@paper_listbox.marker
++++ bazel-base/external/@paper_listbox.marker
+@@ -0,0 +1 @@
++8fde3370d2a2edfff75b40ef9c840876
+--- bazel-base/external/@paper_material.marker
++++ bazel-base/external/@paper_material.marker
+@@ -0,0 +1 @@
++3eaaca9dd1bf32eec0e280b6f78bbbad
+--- bazel-base/external/@paper_menu.marker
++++ bazel-base/external/@paper_menu.marker
+@@ -0,0 +1 @@
++ad7b6409c50885fe43728642268e69dc
+--- bazel-base/external/@paper_menu_button.marker
++++ bazel-base/external/@paper_menu_button.marker
+@@ -0,0 +1 @@
++bfdbbec60a1170f24a450060567a14da
+--- bazel-base/external/@paper_progress.marker
++++ bazel-base/external/@paper_progress.marker
+@@ -0,0 +1 @@
++5b0d5d2b65d993d62695edf94214072e
+--- bazel-base/external/@paper_radio_button.marker
++++ bazel-base/external/@paper_radio_button.marker
+@@ -0,0 +1 @@
++524d749917a37cae570d00fc17d5587c
+--- bazel-base/external/@paper_radio_group.marker
++++ bazel-base/external/@paper_radio_group.marker
+@@ -0,0 +1 @@
++8d291e490bed4d3bcd8ade402df1c15f
+--- bazel-base/external/@paper_ripple.marker
++++ bazel-base/external/@paper_ripple.marker
+@@ -0,0 +1 @@
++dc5f41cfcd7204e0b3d619a16553d8e6
+--- bazel-base/external/@paper_slider.marker
++++ bazel-base/external/@paper_slider.marker
+@@ -0,0 +1 @@
++1c34ca448a3b54cb9402d50c017843c4
+--- bazel-base/external/@paper_spinner.marker
++++ bazel-base/external/@paper_spinner.marker
+@@ -0,0 +1 @@
++2eab27bbbf20feece755e90c3c8680ca
+--- bazel-base/external/@paper_styles.marker
++++ bazel-base/external/@paper_styles.marker
+@@ -0,0 +1 @@
++15ea6f676da555a5ad05d39bbe7f047f
+--- bazel-base/external/@paper_tabs.marker
++++ bazel-base/external/@paper_tabs.marker
+@@ -0,0 +1 @@
++02972da29349fea84a512cd1ae03f768
+--- bazel-base/external/@paper_toast.marker
++++ bazel-base/external/@paper_toast.marker
+@@ -0,0 +1 @@
++17eba2131bd416996d28b2ebaa007c01
+--- bazel-base/external/@paper_toggle_button.marker
++++ bazel-base/external/@paper_toggle_button.marker
+@@ -0,0 +1 @@
++fdedeeec73cb04abaca6f7fe43be8d44
+--- bazel-base/external/@paper_toolbar.marker
++++ bazel-base/external/@paper_toolbar.marker
+@@ -0,0 +1 @@
++a62eeaa8b3d322f9ba8136f8d7fefa06
+--- bazel-base/external/@paper_tooltip.marker
++++ bazel-base/external/@paper_tooltip.marker
+@@ -0,0 +1 @@
++33de2e41113a58352564a1a7cf9c0a24
+--- bazel-base/external/@pcre.marker
++++ bazel-base/external/@pcre.marker
+@@ -0,0 +1 @@
++2925cc203651928923044868ab76f48b
+--- bazel-base/external/@plottable.marker
++++ bazel-base/external/@plottable.marker
+@@ -0,0 +1 @@
++5007d454c519d8580e663dc444182cbc
+--- bazel-base/external/@png_archive.marker
++++ bazel-base/external/@png_archive.marker
+@@ -0,0 +1 @@
++42cd8227bbc0411dc9cf366786cce664
+--- bazel-base/external/@polymer.marker
++++ bazel-base/external/@polymer.marker
+@@ -0,0 +1 @@
++1ecabdeaf51dfe84123abe006ec943dc
+--- bazel-base/external/@promise_polyfill.marker
++++ bazel-base/external/@promise_polyfill.marker
+@@ -0,0 +1 @@
++a8bb60b3e2517e331fe3dacbec0ccb07
+--- bazel-base/external/@protobuf.marker
++++ bazel-base/external/@protobuf.marker
+@@ -0,0 +1 @@
++6a9231d5edef6ebbf127b00d211f0854
+--- bazel-base/external/@six_archive.marker
++++ bazel-base/external/@six_archive.marker
+@@ -0,0 +1 @@
++ff9b188b1ce6918cda54f3a4c5fa2a8c
+--- bazel-base/external/@swig.marker
++++ bazel-base/external/@swig.marker
+@@ -0,0 +1 @@
++d64bef168fdc9042e9a865dfe9ec4cca
+--- bazel-base/external/@three_js_orbitcontrols_js.marker
++++ bazel-base/external/@three_js_orbitcontrols_js.marker
+@@ -0,0 +1 @@
++1dac1e42420b5dbadfc823d657dbbad4
+--- bazel-base/external/@three_js_three_min_js.marker
++++ bazel-base/external/@three_js_three_min_js.marker
+@@ -0,0 +1 @@
++9d1ce78f043c28f41c303c91775d7646
+--- bazel-base/external/@web_animations_js.marker
++++ bazel-base/external/@web_animations_js.marker
+@@ -0,0 +1 @@
++cab467cbe08ba2658f247a93ab2df5c0
+--- bazel-base/external/@webcomponentsjs.marker
++++ bazel-base/external/@webcomponentsjs.marker
+@@ -0,0 +1 @@
++5783bc952c26d219bb6a2aeb53ece67d
+--- bazel-base/external/@weblas_weblas_js.marker
++++ bazel-base/external/@weblas_weblas_js.marker
+@@ -0,0 +1 @@
++5a121a1402f45bff0f61763e5174f28c
+--- bazel-base/external/@zlib_archive.marker
++++ bazel-base/external/@zlib_archive.marker
+@@ -0,0 +1 @@
++233857c198a190ff91c94c7481d7a33a

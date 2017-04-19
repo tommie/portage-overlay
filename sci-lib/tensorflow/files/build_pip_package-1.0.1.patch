@@ -1,0 +1,46 @@
+--- tensorflow/tools/pip_package/build_pip_package.sh.orig	2017-04-17 11:01:53.003692964 +0000
++++ tensorflow/tools/pip_package/build_pip_package.sh	2017-04-17 15:05:13.502657582 +0000
+@@ -36,20 +36,14 @@
+ }
+ 
+ function main() {
+-  if [ $# -lt 1 ] ; then
+-    echo "No destination dir provided"
+-    exit 1
+-  fi
+-
+-  DEST=$1
+   TMPDIR=$(mktemp -d -t tmp.XXXXXXXXXX)
+ 
+   GPU_FLAG=""
+   while true; do
+     if [[ "$1" == "--gpu" ]]; then
+       GPU_FLAG="--project_name tensorflow_gpu"
++      shift
+     fi
+-    shift
+ 
+     if [[ -z "$1" ]]; then
+       break
+@@ -129,19 +123,12 @@
+   cp tensorflow/tools/pip_package/README ${TMPDIR}
+   cp tensorflow/tools/pip_package/setup.py ${TMPDIR}
+ 
+-  # Before we leave the top-level directory, make sure we know how to
+-  # call python.
+-  source tools/python_bin_path.sh
+-
+   pushd ${TMPDIR}
+   rm -f MANIFEST
+-  echo $(date) : "=== Building wheel"
+-  "${PYTHON_BIN_PATH:-python}" setup.py bdist_wheel ${GPU_FLAG} >/dev/null
+-  mkdir -p ${DEST}
+-  cp dist/* ${DEST}
++  echo $(date) : "=== Installing"
++  esetup.py install ${GPU_FLAG}
+   popd
+   rm -rf ${TMPDIR}
+-  echo $(date) : "=== Output wheel file is in: ${DEST}"
+ }
+ 
+ main "$@"
