@@ -1,15 +1,15 @@
 --- bazel-base/external/@boringssl.marker
 +++ bazel-base/external/@boringssl.marker
 @@ -0,0 +1 @@
-+e29f5163c991300b16baa4f03c3cfb21
++05453c7ed1d3bd109f61eca3158d671b
 --- bazel-base/external/@com_googlesource_code_re2.marker
 +++ bazel-base/external/@com_googlesource_code_re2.marker
 @@ -0,0 +1 @@
-+011107dcfbaa2e318baf1ddff09df06e
++d69211fcd8b5858f85f7519aa785b5d0
 --- bazel-base/external/@curl.marker
 +++ bazel-base/external/@curl.marker
 @@ -0,0 +1 @@
-+b6524dd3d67bf237bb134055dc4d3a3a
++a7e97ba2ddf1371c744008c915e34719
 --- bazel-base/external/@d3.marker
 +++ bazel-base/external/@d3.marker
 @@ -0,0 +1 @@
@@ -21,7 +21,7 @@
 --- bazel-base/external/@eigen_archive.marker
 +++ bazel-base/external/@eigen_archive.marker
 @@ -0,0 +1 @@
-+11100648075c693cb09999ae22d68ce2
++42d3649bf0bbd12b75d4d8da9239908c
 --- bazel-base/external/@es6_promise.marker
 +++ bazel-base/external/@es6_promise.marker
 @@ -0,0 +1 @@
@@ -29,7 +29,11 @@
 --- bazel-base/external/@farmhash_archive.marker
 +++ bazel-base/external/@farmhash_archive.marker
 @@ -0,0 +1 @@
-+9fd1de18309aafb801702f5a2aff36c0
++c84fc0efd4633eb5fa8dc0ebcac18d11
+--- bazel-base/external/@fft2d.marker
++++ bazel-base/external/@fft2d.marker
+@@ -0,0 +1 @@
++1efd210a6469eb21945e20a7ba59922f
 --- bazel-base/external/@font_roboto.marker
 +++ bazel-base/external/@font_roboto.marker
 @@ -0,0 +1 @@
@@ -37,11 +41,11 @@
 --- bazel-base/external/@gemmlowp.marker
 +++ bazel-base/external/@gemmlowp.marker
 @@ -0,0 +1 @@
-+5f824f58aaad1adcdba43155b9c595aa
++26a8024ad7ec25853cbb7dc20e75a194
 --- bazel-base/external/@gif_archive.marker
 +++ bazel-base/external/@gif_archive.marker
 @@ -0,0 +1 @@
-+8a3a1f84dcca8b28136e5c4484cd6f20
++135e6145c2431788d3be2bdceb28eda3
 --- bazel-base/external/@graphlib.marker
 +++ bazel-base/external/@graphlib.marker
 @@ -0,0 +1 @@
@@ -49,11 +53,15 @@
 --- bazel-base/external/@grpc.marker
 +++ bazel-base/external/@grpc.marker
 @@ -0,0 +1 @@
-+8d52a2c7c828327592f4100a98b07135
++711d06e67943c6faa2c0619c3f7b4aac
 --- bazel-base/external/@highwayhash.marker
 +++ bazel-base/external/@highwayhash.marker
 @@ -0,0 +1 @@
-+df440b2a0042baa6835408805c89b0a8
++cffd35d52b5e566a30892a4c087468ff
+--- bazel-base/external/@io_bazel_rules_closure.marker
++++ bazel-base/external/@io_bazel_rules_closure.marker
+@@ -0,0 +1 @@
++b8d21992c0b13427f1ed2156f41743ce
 --- bazel-base/external/@iron_a11y_announcer.marker
 +++ bazel-base/external/@iron_a11y_announcer.marker
 @@ -0,0 +1 @@
@@ -153,15 +161,23 @@
 --- bazel-base/external/@jemalloc.marker
 +++ bazel-base/external/@jemalloc.marker
 @@ -0,0 +1 @@
-+a94c30caec46939342f85573e882f0ee
++192e36832fc7fdea9f7810ae1fc0861c
 --- bazel-base/external/@jpeg.marker
 +++ bazel-base/external/@jpeg.marker
 @@ -0,0 +1 @@
-+23aa0d4cac2b2dd0370ad6a3736e9663
++9eaf3cb5b4d150f7f3a17c503994b86d
+--- bazel-base/external/@jsoncpp_git.marker
++++ bazel-base/external/@jsoncpp_git.marker
+@@ -0,0 +1 @@
++356b3325811324c3ae549de8b7e43592
 --- bazel-base/external/@libxsmm_archive.marker
 +++ bazel-base/external/@libxsmm_archive.marker
 @@ -0,0 +1 @@
-+199db25282fde9b8dde716d37591baaa
++a6891e04ba424e367239fbf263e80b5c
+--- bazel-base/external/@llvm.marker
++++ bazel-base/external/@llvm.marker
+@@ -0,0 +1 @@
++bd78325628439a314a211a5684e5a213
 --- bazel-base/external/@lodash.marker
 +++ bazel-base/external/@lodash.marker
 @@ -0,0 +1 @@
@@ -169,15 +185,15 @@
 --- bazel-base/external/@nanopb_git.marker
 +++ bazel-base/external/@nanopb_git.marker
 @@ -0,0 +1 @@
-+36b4227668f2d56f3d2279dff151c062
++dd08ecbf3a9aa793f1f99a8c11d53d3e
 --- bazel-base/external/@nasm.marker
 +++ bazel-base/external/@nasm.marker
 @@ -0,0 +1 @@
-+e1ef32662eb178740f93afd1adf01023
++4a12470f38fae8236215d39e167314ee
 --- bazel-base/external/@nccl_archive.marker
 +++ bazel-base/external/@nccl_archive.marker
 @@ -0,0 +1 @@
-+ceb952539376eb507f0e52de15b9b90c
++7799bddea485ff61ce1d3a98402e2450
 --- bazel-base/external/@neon_animation.marker
 +++ bazel-base/external/@neon_animation.marker
 @@ -0,0 +1 @@
@@ -186,6 +202,22 @@
 +++ bazel-base/external/@numericjs_numeric_min_js.marker
 @@ -0,0 +1 @@
 +e2a836d62c0de6b0ad8c85e79d0cb45f
+--- bazel-base/external/@org_html5lib.marker
++++ bazel-base/external/@org_html5lib.marker
+@@ -0,0 +1 @@
++9fc2deac3ff167e1f966d7b92d2df447
+--- bazel-base/external/@org_mozilla_bleach.marker
++++ bazel-base/external/@org_mozilla_bleach.marker
+@@ -0,0 +1 @@
++8cc58ae2afac93a12af57c275c5d820d
+--- bazel-base/external/@org_pocoo_werkzeug.marker
++++ bazel-base/external/@org_pocoo_werkzeug.marker
+@@ -0,0 +1 @@
++1a88dce4939a5c36d7039744a2ebee5d
+--- bazel-base/external/@org_pythonhosted_markdown.marker
++++ bazel-base/external/@org_pythonhosted_markdown.marker
+@@ -0,0 +1 @@
++583feb4f556a07d17fd17aecb243c280
 --- bazel-base/external/@paper_behaviors.marker
 +++ bazel-base/external/@paper_behaviors.marker
 @@ -0,0 +1 @@
@@ -297,7 +329,7 @@
 --- bazel-base/external/@pcre.marker
 +++ bazel-base/external/@pcre.marker
 @@ -0,0 +1 @@
-+45d9b6b318920cb6023446e908b596ef
++7f03f3ef9d37570fe32a5c7996ec9adf
 --- bazel-base/external/@plottable.marker
 +++ bazel-base/external/@plottable.marker
 @@ -0,0 +1 @@
@@ -305,7 +337,7 @@
 --- bazel-base/external/@png_archive.marker
 +++ bazel-base/external/@png_archive.marker
 @@ -0,0 +1 @@
-+5b751fbca6d5287c6cd46f1559fcd9d8
++cc3c133f929f5d44d3616753ba684f4b
 --- bazel-base/external/@polymer.marker
 +++ bazel-base/external/@polymer.marker
 @@ -0,0 +1 @@
@@ -317,15 +349,19 @@
 --- bazel-base/external/@protobuf.marker
 +++ bazel-base/external/@protobuf.marker
 @@ -0,0 +1 @@
-+d8fdc36e10fefa936b1153d821cb0755
++604f8ec1bf2c62de5b770845cf7e6757
 --- bazel-base/external/@six_archive.marker
 +++ bazel-base/external/@six_archive.marker
 @@ -0,0 +1 @@
-+bbc77c33c422e5b465fabb025335a74b
++15ef2f9c528e989f24d69e69575d92f8
+--- bazel-base/external/@snappy.marker
++++ bazel-base/external/@snappy.marker
+@@ -0,0 +1 @@
++7c64c905f50a6043c202b625cc804384
 --- bazel-base/external/@swig.marker
 +++ bazel-base/external/@swig.marker
 @@ -0,0 +1 @@
-+15536ac3f272bddbf9197f91b3cef645
++5d8157fa0e6e5b1aeaa4c26fb457e61d
 --- bazel-base/external/@three_js_orbitcontrols_js.marker
 +++ bazel-base/external/@three_js_orbitcontrols_js.marker
 @@ -0,0 +1 @@
@@ -349,4 +385,4 @@
 --- bazel-base/external/@zlib_archive.marker
 +++ bazel-base/external/@zlib_archive.marker
 @@ -0,0 +1 @@
-+d03ac6c8be0c3c9d7765d6ddca2789c0
++f12f7ea29bb3978e2e6306faac79138f
