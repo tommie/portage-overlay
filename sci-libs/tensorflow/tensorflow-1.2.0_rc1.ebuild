@@ -137,7 +137,8 @@ IUSE="cuda gcp go hdfs jemalloc lib +python
 RDEPEND="python? ( >=dev-python/numpy-1.11.0[${PYTHON_USEDEP}]
 		>=dev-python/six-1.10.0[${PYTHON_USEDEP}]
 		>=dev-python/wheel-0.26[${PYTHON_USEDEP}]
-		>=dev-python/protobuf-python-3.1.0[${PYTHON_USEDEP}] )"
+		>=dev-python/protobuf-python-3.1.0[${PYTHON_USEDEP}]
+		>=dev-python/werkzeug-0.11.11[${PYTHON_USEDEP}] )"
 # CUPTI is required, so cuda-toolkit needs profiler.
 # patchelf >=0.9 has the --remove-rpath option.
 DEPEND="${RDEPEND}
