@@ -1,6 +1,24 @@
 # Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
+#
+# To update this to a new version of Tensorflow:
+#
+#  1) Copy this file to the new ebuild. Let's call this $ebuild.
+#  2) Install required dependencies.
+#  3) Run "USE=... ebuild $ebuild fetch" to download the new distfile.
+#     You could use Git directly, but this guarantees you get the right files.
+#  4) Unpack the file somewhere. Let's call the source directory $tf.
+#  5) Run "cd $tf && ./configure" and enable CUDA. We won't actually be building
+#     Tensorflow here, so only options that enable/disable specific
+#     third-party dependencies matter, not optimization settings or paths. You
+#     can see the options to use in src_compile below.
+#  6) Run "${FILESDIR}/bazelexternals.py $ebuild $tf". This will update $ebuild
+#     and create a new ${FILESDIR}/bazel-markers-*.patch.
+#  7) Run "USE=... ebuild --skip-manifest $ebuild install" to test it. Verify
+#     the image directory and tweak the ebuild and/or bazelexternals.py until
+#     this works.
+#  8) Update the manifest, etc.
 
 EAPI=6
 
