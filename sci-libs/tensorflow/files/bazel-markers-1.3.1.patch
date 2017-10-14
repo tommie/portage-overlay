@@ -1,0 +1,120 @@
+--- bazel-base/external/@boringssl.marker
++++ bazel-base/external/@boringssl.marker
+@@ -0,0 +1 @@
++43925db314a2a0bc8696359960c121d8
+--- bazel-base/external/@com_googlesource_code_re2.marker
++++ bazel-base/external/@com_googlesource_code_re2.marker
+@@ -0,0 +1 @@
++d69211fcd8b5858f85f7519aa785b5d0
+--- bazel-base/external/@cub_archive.marker
++++ bazel-base/external/@cub_archive.marker
+@@ -0,0 +1 @@
++fccd96b13a8ea6511885447c126b65fd
+--- bazel-base/external/@curl.marker
++++ bazel-base/external/@curl.marker
+@@ -0,0 +1 @@
++511ccaa5cb414bf340c206963a7733b1
+--- bazel-base/external/@eigen_archive.marker
++++ bazel-base/external/@eigen_archive.marker
+@@ -0,0 +1 @@
++42d3649bf0bbd12b75d4d8da9239908c
+--- bazel-base/external/@farmhash_archive.marker
++++ bazel-base/external/@farmhash_archive.marker
+@@ -0,0 +1 @@
++c84fc0efd4633eb5fa8dc0ebcac18d11
+--- bazel-base/external/@fft2d.marker
++++ bazel-base/external/@fft2d.marker
+@@ -0,0 +1 @@
++1efd210a6469eb21945e20a7ba59922f
+--- bazel-base/external/@gemmlowp.marker
++++ bazel-base/external/@gemmlowp.marker
+@@ -0,0 +1 @@
++03e3c1312971e9c48a2aa817a9ac49ff
+--- bazel-base/external/@gif_archive.marker
++++ bazel-base/external/@gif_archive.marker
+@@ -0,0 +1 @@
++135e6145c2431788d3be2bdceb28eda3
+--- bazel-base/external/@grpc.marker
++++ bazel-base/external/@grpc.marker
+@@ -0,0 +1 @@
++711d06e67943c6faa2c0619c3f7b4aac
+--- bazel-base/external/@highwayhash.marker
++++ bazel-base/external/@highwayhash.marker
+@@ -0,0 +1 @@
++cffd35d52b5e566a30892a4c087468ff
+--- bazel-base/external/@io_bazel_rules_closure.marker
++++ bazel-base/external/@io_bazel_rules_closure.marker
+@@ -0,0 +1 @@
++21ac28ec5d231e40036c68e6562d5542
+--- bazel-base/external/@jemalloc.marker
++++ bazel-base/external/@jemalloc.marker
+@@ -0,0 +1 @@
++80eddee00ce305809760b4c6bc6c891d
+--- bazel-base/external/@jpeg.marker
++++ bazel-base/external/@jpeg.marker
+@@ -0,0 +1 @@
++5d91b7d259d94d70d22836e67a581650
+--- bazel-base/external/@jsoncpp_git.marker
++++ bazel-base/external/@jsoncpp_git.marker
+@@ -0,0 +1 @@
++356b3325811324c3ae549de8b7e43592
+--- bazel-base/external/@libxsmm_archive.marker
++++ bazel-base/external/@libxsmm_archive.marker
+@@ -0,0 +1 @@
++2516bd1c2218c87a550ce1db271fc3ac
+--- bazel-base/external/@llvm.marker
++++ bazel-base/external/@llvm.marker
+@@ -0,0 +1 @@
++fc182be70854aee45bd636b3907605f4
+--- bazel-base/external/@lmdb.marker
++++ bazel-base/external/@lmdb.marker
+@@ -0,0 +1 @@
++a63fa7eb322a5791b0a9acd0911e545d
+--- bazel-base/external/@nanopb_git.marker
++++ bazel-base/external/@nanopb_git.marker
+@@ -0,0 +1 @@
++dd08ecbf3a9aa793f1f99a8c11d53d3e
+--- bazel-base/external/@nasm.marker
++++ bazel-base/external/@nasm.marker
+@@ -0,0 +1 @@
++4a12470f38fae8236215d39e167314ee
+--- bazel-base/external/@nccl_archive.marker
++++ bazel-base/external/@nccl_archive.marker
+@@ -0,0 +1 @@
++58ac2e1d872a811afbebc8678e41daff
+--- bazel-base/external/@org_python_license.marker
++++ bazel-base/external/@org_python_license.marker
+@@ -0,0 +1 @@
++31ad91c88f47b01326b3237084b95acc
+--- bazel-base/external/@org_python_pypi_backports_weakref.marker
++++ bazel-base/external/@org_python_pypi_backports_weakref.marker
+@@ -0,0 +1 @@
++da774427e3084bd6ba7cf3ffabd2ee4a
+--- bazel-base/external/@pcre.marker
++++ bazel-base/external/@pcre.marker
+@@ -0,0 +1 @@
++7f03f3ef9d37570fe32a5c7996ec9adf
+--- bazel-base/external/@png_archive.marker
++++ bazel-base/external/@png_archive.marker
+@@ -0,0 +1 @@
++cc3c133f929f5d44d3616753ba684f4b
+--- bazel-base/external/@protobuf.marker
++++ bazel-base/external/@protobuf.marker
+@@ -0,0 +1 @@
++19ad03ff9df5c65cb2fcef8411449385
+--- bazel-base/external/@six_archive.marker
++++ bazel-base/external/@six_archive.marker
+@@ -0,0 +1 @@
++392c2fbdf9aada73825d646d0915c84b
+--- bazel-base/external/@snappy.marker
++++ bazel-base/external/@snappy.marker
+@@ -0,0 +1 @@
++567f51688aa60f13267e4fb86b9962f4
+--- bazel-base/external/@swig.marker
++++ bazel-base/external/@swig.marker
+@@ -0,0 +1 @@
++5d8157fa0e6e5b1aeaa4c26fb457e61d
+--- bazel-base/external/@zlib_archive.marker
++++ bazel-base/external/@zlib_archive.marker
+@@ -0,0 +1 @@
++f12f7ea29bb3978e2e6306faac79138f

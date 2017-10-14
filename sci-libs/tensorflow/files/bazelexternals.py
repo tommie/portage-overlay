@@ -34,6 +34,7 @@ import xml.etree.ElementTree as ET
 import portage.versions as versions
 
 
+FilegroupExternal = collections.namedtuple("FilegroupExternal", ["name", "urls", "strip_prefix", "marker", "basename"])
 HttpArchive = collections.namedtuple("HttpArchive", ["name", "urls", "strip_prefix", "marker", "build_file"])
 HttpFile = collections.namedtuple("HttpFile", ["name", "urls", "strip_prefix", "marker"])
 
@@ -58,6 +59,8 @@ def uri_record(c):
     mrk = "=>"
     if isinstance(c, HttpFile):
         mrk = "->"
+    elif isinstance(c, FilegroupExternal):
+        mrk = "-->"
     args.extend([mrk, c.name.replace("//external:", ""), c.strip_prefix or "."])
     if isinstance(c, HttpArchive) and c.build_file:
         args.append(label_to_path(c.build_file))
@@ -93,7 +96,7 @@ def get_externals(workspace, targets, repository_rules):
     xml = subprocess.check_output([
         "bazel",
         "query", "--output", "xml", "--nofetch", "--config=opt",
-        "kind('git_repository|http_archive|http_file|maven_jar|maven_server rule', //external:*)"], cwd=workspace)
+        "kind('filegroup_external|git_repository|http_archive|http_file|maven_jar|maven_server rule', //external:*)"], cwd=workspace)
     rules = ET.fromstring(xml)
     deps = []
     for r in rules.iter("rule"):
@@ -108,26 +111,35 @@ def get_externals(workspace, targets, repository_rules):
         if not build_file:
             build_file = r.find("label[@name='build_file']")
             build_file = build_file.get("value") if build_file is not None else None
-        if r.get("class") in repository_rules:
-            urls = []
-            for u in r.findall("list[@name='urls']/string"):
-                urls.append(u.get("value"))
-            for u in r.findall("string[@name='url']"):
-                urls.append(u.get("value"))
-
-            with open(os.path.join(output_base, "external", marker_name(name)), "r") as f:
-                # The temp_workaround_http_archive rule causes the copied build_file
-                # to be checked against a checksum. That would have been fine if the mtime
-                # wasn't part of the checksum. We really don't care.
-                marker = [l for l in f.read().splitlines(True)
-                          if not l.startswith("FILE:")]
-
-            if r.get("class") == "http_file":
-                deps.append(HttpFile(name, urls, sp, marker))
-            else:
-                deps.append(HttpArchive(name, urls, sp, marker, build_file))
-        else:
+        if r.get("class") not in repository_rules:
             raise ValueError("unimplemented rule type {}".format(r.get("class")))
+
+        urls = []
+        for u in r.findall("list[@name='urls']/string"):
+            urls.append(u.get("value"))
+        for u in r.findall("string[@name='url']"):
+            urls.append(u.get("value"))
+
+        with open(os.path.join(output_base, "external", marker_name(name)), "r") as f:
+            # The temp_workaround_http_archive rule causes the copied build_file
+            # to be checked against a checksum. That would have been fine if the mtime
+            # wasn't part of the checksum. We really don't care.
+            marker = [l for l in f.read().splitlines(True)
+                      if not l.startswith("FILE:")]
+
+        if r.get("class") == "filegroup_external":
+            # This can have multiple URLs per rule.
+            for file in r.findall("dict[@name='sha256_urls']/pair"):
+                urls = [u.get("value") for u in file.findall("list/string")]
+                rename = r.find("string[@name='rename']")
+                basename = rename.get("value") if rename is not None else urls[0].rsplit("/", 1)[-1]
+                deps.append(FilegroupExternal(name, urls, None, marker, basename))
+            if r.findall("dict[@name='sha256_urls_extract']/pair"):
+                raise NotImplementedError("Found filegroup_external with sha256_urls_extract: {}".format(name))
+        elif r.get("class") == "http_file":
+            deps.append(HttpFile(name, urls, sp, marker))
+        else:
+            deps.append(HttpArchive(name, urls, sp, marker, build_file))
 
     return sorted(deps, key=lambda x: x.name)
 
@@ -175,11 +187,11 @@ def write_markers_file(deps, path):
         os.unlink(path)
         raise
 
-    
+
 def main():
     argp = argparse.ArgumentParser()
     argp.add_argument("--targets", type=str, action="append", default=["//tensorflow/tools/pip_package:build_pip_package", "//tensorflow:libtensorflow.so", "@io_bazel_rules_closure//closure:defs.bzl"], help="Targets to extract dependencies from")
-    argp.add_argument("--repository_rules", type=str, action="append", default=["http_archive", "http_file", "new_http_archive", "patched_http_archive", "temp_workaround_http_archive"], help="Repository rule types to include")
+    argp.add_argument("--repository_rules", type=str, action="append", default=["filegroup_external", "http_archive", "http_file", "new_http_archive", "patched_http_archive", "temp_workaround_http_archive"], help="Repository rule types to include")
     argp.add_argument("ebuild", type=str, help="Ebuild file to update")
     argp.add_argument("workspace", type=str, help="Bazel workspace directory")
     args = argp.parse_args()
@@ -191,10 +203,11 @@ def main():
 
     os.environ.update(dict(
         CC_OPT_FLAGS="-mnative -msse -msse2 -msse3",
-        TF_NEED_JEMALLOC="0",
-        TF_NEED_GCP="0",
-        TF_NEED_HDFS="0",
+        TF_NEED_JEMALLOC="1",
+        TF_NEED_GCP="1",
+        TF_NEED_HDFS="1",
         TF_NEED_MKL="0",
+        TF_NEED_MPI="0",
         TF_NEED_OPENCL="0",
         TF_NEED_CUDA="1",
         TF_NEED_VERBS="0",
@@ -204,16 +217,16 @@ def main():
         CUDA_TOOLKIT_PATH="/opt/cuda",
         TF_CUDNN_VERSION="6",
         CUDNN_INSTALL_PATH="/usr",
-        TF_CUDA_COMPUTE_CAPABILITIES="3.5,5.2",
+        TF_CUDA_COMPUTE_CAPABILITIES="3.5,5.2,6.1",
         TF_ENABLE_XLA="0",
         PYTHON_BIN_PATH="/usr/bin/python3.4",
         PYTHON_LIB_PATH="/usr/lib64/python3.4/site-packages"))
-    os.system("./configure")
+    subprocess.check_call(["./configure"], cwd=args.workspace)
 
     # Get external repositories.
     subprocess.check_call(["bazel", "fetch", "--config=opt"] + args.targets, cwd=args.workspace)
     deps = get_externals(args.workspace, args.targets, args.repository_rules)
-    
+
     # Update the ebuild source URIs.
     update_ebuild_file(deps, args.ebuild)
 
