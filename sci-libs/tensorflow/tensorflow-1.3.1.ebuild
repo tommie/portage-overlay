@@ -169,7 +169,7 @@ src_prepare() {
 	done
 	# Don't invoke deviceQuery since it tried to break out of the sandbox.
 	sed -i -e '/\$(get_native_cuda_compute_capabilities)/ d' "${S}/configure" || die
-	sed -i -e '/^bazel version >/bazel --batch version/' "${S}/configure" || die
+	sed -i -e 's/^bazel version \>/bazel --batch version/' "${S}/configure" || die
 	cat >>"${S}/configure" <<EOF
 # Make Bazel extract embedded files.
 bazel --output_base="\${BAZEL_OUTPUT_BASE}" --batch version >/dev/null || die
