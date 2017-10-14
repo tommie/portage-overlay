@@ -239,14 +239,17 @@ src_configure() {
 }
 
 src_compile() {
+	# F: fopen_wr
+	# P: /proc/self/setgroups
+	# Even with standalone enabled, the Bazel sandbox binary is run for feature test:
+	# https://github.com/bazelbuild/bazel/blob/7b091c1397a82258e26ab5336df6c8dae1d97384/src/main/java/com/google/devtools/build/lib/sandbox/LinuxSandboxedSpawnRunner.java#L61
+	# https://github.com/bazelbuild/bazel/blob/76555482873ffcf1d32fb40106f89231b37f850a/src/main/tools/linux-sandbox-pid1.cc#L113
+	addpredict /proc
+
 	if use python; then
 		do_compile() {
 			local bazel_base="${WORKDIR}/bazel-base-${MULTIBUILD_VARIANT}"
 			cd "${BUILD_DIR}" || die
-			# F: fopen_wr
-			# P: /proc/self/setgroups
-			# Accesses unless standalone is enabled.
-			# https://github.com/bazelbuild/bazel/blob/76555482873ffcf1d32fb40106f89231b37f850a/src/main/tools/linux-sandbox-pid1.cc#L113
 			bazel --output_base="${bazel_base}" --batch \
 			      build --noshow_loading_progress --show_progress_rate_limit=30 \
 			      --nofetch --spawn_strategy=standalone --genrule_strategy=standalone \
@@ -260,10 +263,6 @@ src_compile() {
 		do_libcompile() {
 			local bazel_base="${WORKDIR}/bazel-base-${MULTIBUILD_VARIANT}"
 			cd "${BUILD_DIR}" || die
-			# F: fopen_wr
-			# P: /proc/self/setgroups
-			# Accesses unless standalone is enabled.
-			# https://github.com/bazelbuild/bazel/blob/76555482873ffcf1d32fb40106f89231b37f850a/src/main/tools/linux-sandbox-pid1.cc#L113
 			bazel --output_base="${bazel_base}" --batch \
 			      build --noshow_loading_progress --show_progress_rate_limit=30 \
 			      --nofetch --spawn_strategy=standalone --genrule_strategy=standalone \
