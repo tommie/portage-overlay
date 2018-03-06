@@ -45,7 +45,7 @@ COMMON_DEPEND=">=sys-apps/sed-4.0.5
 	) ) )
 	mysql? ( virtual/libmysqlclient )
 	postgres? ( dev-db/postgresql:= )
-	kerberos? ( >=app-crypt/heimdal-1.5.3-r2 )
+	kerberos? ( >=app-crypt/heimdal-7.5.0 )
 	sasl? ( >=dev-libs/cyrus-sasl-2.1.26-r2 )
 	redis? ( dev-libs/hiredis )
 	spf? ( >=mail-filter/libspf2-1.2.5-r1 )
@@ -364,7 +364,7 @@ src_configure() {
 	if use kerberos; then
 		cat >> Makefile <<- EOC
 			AUTH_HEIMDAL_GSSAPI=yes
-			AUTH_HEIMDAL_GSSAPI_PC=heimdal-gssapi
+			AUTH_HEIMDAL_GSSAPI_PC=heimdal-gssapi heimdal-krb5
 		EOC
 	fi
 
