@@ -30,7 +30,7 @@ inherit distutils-r1 epatch golang-build
 
 from_bazel_uri() {
     echo "$1" | while read url mark pkg strip_prefix extra; do
-        echo "${url} -> ${pkg}-$(sha256sum <<<"${url}" | cut -d' ' -f1)-${url##*/}"
+        echo "${url} -> ${P}-${pkg}-${url##*/}"
     done
 }
 
@@ -118,7 +118,7 @@ src_prepare() {
 	echo "${bazel_uri}" | while read url mark pkg strip_prefix build_file extra; do
         	einfo "Installing prefetched //external:${pkg}..."
 		if [ "x${mark}" = 'x-->' ]; then
-	        	local f="${DISTDIR}/${pkg}-$(sha256sum <<<"${url}" | cut -d' ' -f1)-${url##*/}"
+			local f="${DISTDIR}/${P}-${pkg}-${url##*/}"
 			mkdir -p "${bazel_base}/external/${pkg}"
 			cp "${f}" "${bazel_base}/external/${pkg}/${url##*/}" || die
 			(echo '# DO NOT EDIT: automatically generated BUILD.bazel file for filegroup_external rule'
@@ -128,7 +128,7 @@ src_prepare() {
 			 echo "    visibility = ['//visibility:public']"
 			 echo ')') >"${bazel_base}/external/${pkg}/BUILD.bazel"
 		elif [ "x${mark}" = 'x->' ]; then
-	        	local f="${DISTDIR}/${pkg}-$(sha256sum <<<"${url}" | cut -d' ' -f1)-${url##*/}"
+			local f="${DISTDIR}/${P}-${pkg}-${url##*/}"
 			mkdir -p "${bazel_base}/external/${pkg}/file"
 			cp "${f}" "${bazel_base}/external/${pkg}/${url##*/}" || die
 			cp "${f}" "${bazel_base}/external/${pkg}/file/${url##*/}" || die
