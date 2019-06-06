@@ -1,0 +1,23 @@
+--- exim-4.92/src/auths/heimdal_gssapi.c	2019-01-30 13:59:52.000000000 +0000
++++ heimdal_gssapi.c.new	2019-06-06 19:30:22.714936374 +0000
+@@ -82,8 +82,8 @@
+ /* Dummy values */
+ void auth_heimdal_gssapi_init(auth_instance *ablock) {}
+ int auth_heimdal_gssapi_server(auth_instance *ablock, uschar *data) {return 0;}
+-int auth_heimdal_gssapi_client(auth_instance *ablock, void * sx,
+-  int timeout, uschar *buffer, int buffsize) {return 0;}
++int auth_heimdal_gssapi_client(auth_instance *ablock, smtp_inblock * sx,
++			       smtp_outblock * sy, int timeout, uschar *buffer, int buffsize) {return 0;}
+ void auth_heimdal_gssapi_version_report(FILE *f) {}
+ 
+ #else   /*!MACRO_PREDEF*/
+@@ -577,7 +577,8 @@
+ int
+ auth_heimdal_gssapi_client(
+   auth_instance *ablock,                 /* authenticator block */
+-  void * sx,				 /* connection */
++  smtp_inblock * sx,				 /* connection */
++  smtp_outblock * sy,
+   int timeout,                           /* command timeout */
+   uschar *buffer,                        /* buffer for reading response */
+   int buffsize)                          /* size of buffer */

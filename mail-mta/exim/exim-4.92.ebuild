@@ -110,6 +110,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/exim-4.82-makefile-freebsd.patch # 235785
 	epatch "${FILESDIR}"/exim-4.89-as-needed-ldflags.patch # 352265, 391279
 	epatch "${FILESDIR}"/exim-4.76-crosscompile.patch # 266591
+	epatch "${FILESDIR}"/exim-4.92-heimdal.patch
 
 	if use maildir ; then
 		epatch "${FILESDIR}"/exim-4.20-maildir.patch
