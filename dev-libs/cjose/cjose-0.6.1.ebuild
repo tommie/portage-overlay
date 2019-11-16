@@ -12,7 +12,7 @@ DESCRIPTION="C library implementing the Javascript Object Signing and Encryption
 HOMEPAGE="https://github.com/cisco/cjose"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc test"
 
 RDEPEND="
