@@ -40,3 +40,7 @@ src_configure() {
 		$(use_with redis hiredis) \
         $(use_with jq)
 }
+
+src_compile() {
+	emake
+}
