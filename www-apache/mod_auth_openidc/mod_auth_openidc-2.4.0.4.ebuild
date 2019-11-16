@@ -20,6 +20,7 @@ RDEPEND="net-misc/curl
 	dev-libs/openssl
 	dev-libs/apr
 	dev-libs/jansson
+	dev-libs/cjose
 	dev-libs/libpcre
 	redis? ( dev-libs/hiredis )
 	jq? ( app-misc/jq )"
